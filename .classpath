@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="limit-modules" value="java.se,jdk.accessibility,jdk.dynalink,jdk.httpserver,jdk.jartool,jdk.javadoc,jdk.jconsole,jdk.jshell,jdk.jsobject,jdk.management.jfr,jdk.net,jdk.nio.mapmode,jdk.sctp,jdk.security.auth,jdk.security.jgss,jdk.unsupported,jdk.unsupported.desktop,jdk.xml.dom,jdk.charsets,jdk.hotspot.agent,jdk.jstatd,jdk.jcmd,jdk.crypto.cryptoki,jdk.random,jdk.naming.rmi,jdk.zipfs,jdk.crypto.mscapi,jdk.editpad,java.smartcardio,jdk.internal.vm.compiler,jdk.internal.vm.compiler.management,jdk.jpackage,jdk.naming.dns,jdk.localedata"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="hotel.service/src/main/java"/>
+	<classpathentry kind="src" path="hotel.service/src/test/java"/>
+	<classpathentry kind="src" path="ratingservice/build/generated/sources/annotationProcessor/java/main"/>
+	<classpathentry kind="src" path="ratingservice/src/main/java"/>
+	<classpathentry kind="src" path="ratingservice/src/test/java"/>
+	<classpathentry kind="src" path="user.service/build/generated/sources/annotationProcessor/java/main"/>
+	<classpathentry kind="src" path="user.service/src/main/java"/>
+	<classpathentry kind="src" path="user.service/src/test/java"/>
+	<classpathentry exported="true" kind="lib" path="hotel.service/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry exported="true" kind="lib" path="ratingservice/build/libs/ratingservice-0.0.1-SNAPSHOT-plain.jar"/>
+	<classpathentry exported="true" kind="lib" path="ratingservice/build/libs/ratingservice-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="ratingservice/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry exported="true" kind="lib" path="user.service/build/libs/user.service-0.0.1-SNAPSHOT-plain.jar"/>
+	<classpathentry exported="true" kind="lib" path="user.service/build/libs/user.service-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="user.service/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="ratingservice/build/classes/java/main"/>
+</classpath>
