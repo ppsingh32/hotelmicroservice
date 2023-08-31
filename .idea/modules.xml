@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/api.gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api.gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.gateway.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api.gateway.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.hotel.hotel.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.hotel.hotel.service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.rating.ratingservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.rating.ratingservice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.userservice.user.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.userservice.user.service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel.service.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel.service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel.service.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hotelmicroservice.iml" filepath="$PROJECT_DIR$/.idea/hotelmicroservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratingservice.iml" filepath="$PROJECT_DIR$/.idea/modules/ratingservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ratingservice.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ratingservice.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.registry.iml" filepath="$PROJECT_DIR$/.idea/modules/service.registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.registry.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service.registry.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service.registry.test.iml" filepath="$PROJECT_DIR$/.idea/modules/service.registry.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user.service.iml" filepath="$PROJECT_DIR$/.idea/modules/user.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user.service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/user.service.test.iml" />
     </modules>
   </component>
 </project>

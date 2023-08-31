@@ -36,7 +36,7 @@ public class RatingController {
 
     //get all of hotels
     @GetMapping("/hotels/{hotelId}")
-    public ResponseEntity<List<RatingResponseDto>> getRatingsByHotelId(@PathVariable Long hotelId) {
+    public ResponseEntity<List<RatingResponseDto>> getRatingsByHotelId(@PathVariable String hotelId) {
         return ratingService.getRatingByHotelId(hotelId);
     }
 

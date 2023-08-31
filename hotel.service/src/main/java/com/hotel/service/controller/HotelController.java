@@ -25,7 +25,7 @@ public class HotelController {
 
     //get single
     @GetMapping("/{hotelId}")
-    public ResponseEntity<HotelResponseDto> createHotel(@PathVariable Long hotelId) {
+    public ResponseEntity<HotelResponseDto> getHotel(@PathVariable String hotelId) {
         return hotelService.getHotelById(hotelId);
     }
 

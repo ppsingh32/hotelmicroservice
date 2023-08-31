@@ -4,32 +4,29 @@ import lombok.Data;
 
 @Data
 public class RatingRequestDto {
-    private Long ratingId;
-
+    private Long id;
     private Long userId;
-
-    private Long hotelId;
-
-    private  int rating;
-
+    private String hotelId;
+    private  Long rating;
     private  String feedback;
+
     public RatingRequestDto() {
     }
 
-    public RatingRequestDto(Long ratingId, Long userId, Long hotelId, int rating, String feedback) {
-        this.ratingId = ratingId;
+    public RatingRequestDto(Long id, Long userId, String hotelId, Long rating, String feedback) {
+        this.id = id;
         this.userId = userId;
         this.hotelId = hotelId;
         this.rating = rating;
         this.feedback = feedback;
     }
 
-    public Long getRatingId() {
-        return ratingId;
+    public Long getId() {
+        return id;
     }
 
-    public void setRatingId(Long ratingId) {
-        this.ratingId = ratingId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getUserId() {
@@ -40,19 +37,19 @@ public class RatingRequestDto {
         this.userId = userId;
     }
 
-    public Long getHotelId() {
+    public String getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(Long hotelId) {
+    public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
 
-    public int getRating() {
+    public Long getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Long rating) {
         this.rating = rating;
     }
 
@@ -67,9 +64,9 @@ public class RatingRequestDto {
     @Override
     public String toString() {
         return "RatingRequestDto{" +
-                "ratingId=" + ratingId +
+                "id=" + id +
                 ", userId=" + userId +
-                ", hotelId=" + hotelId +
+                ", hotelId='" + hotelId + '\'' +
                 ", rating=" + rating +
                 ", feedback='" + feedback + '\'' +
                 '}';

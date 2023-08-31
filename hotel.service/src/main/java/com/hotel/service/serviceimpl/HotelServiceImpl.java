@@ -38,7 +38,7 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public ResponseEntity<HotelResponseDto> getHotelById(Long id) {
+    public ResponseEntity<HotelResponseDto> getHotelById(String id) {
         Optional<Hotel> byId = repositorty.findById(id);
         if(byId.isPresent())
         {
