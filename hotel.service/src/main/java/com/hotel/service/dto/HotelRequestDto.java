@@ -4,74 +4,60 @@ import lombok.Data;
 
 @Data
 public class HotelRequestDto {
-    private Long ratingId;
+    private String id;
+    private String name;
+    private String location;
+    private String about;
 
-    private Long userId;
-
-    private Long hotelId;
-
-    private  int rating;
-
-    private  String feedback;
     public HotelRequestDto() {
     }
 
-    public HotelRequestDto(Long ratingId, Long userId, Long hotelId, int rating, String feedback) {
-        this.ratingId = ratingId;
-        this.userId = userId;
-        this.hotelId = hotelId;
-        this.rating = rating;
-        this.feedback = feedback;
+    public HotelRequestDto(String id, String name, String location, String about) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.about = about;
     }
 
-    public Long getRatingId() {
-        return ratingId;
+    public String getId() {
+        return id;
     }
 
-    public void setRatingId(Long ratingId) {
-        this.ratingId = ratingId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getName() {
+        return name;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Long getHotelId() {
-        return hotelId;
+    public String getLocation() {
+        return location;
     }
 
-    public void setHotelId(Long hotelId) {
-        this.hotelId = hotelId;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public int getRating() {
-        return rating;
+    public String getAbout() {
+        return about;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public String getFeedback() {
-        return feedback;
-    }
-
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
+    public void setAbout(String about) {
+        this.about = about;
     }
 
     @Override
     public String toString() {
-        return "RatingRequestDto{" +
-                "ratingId=" + ratingId +
-                ", userId=" + userId +
-                ", hotelId=" + hotelId +
-                ", rating=" + rating +
-                ", feedback='" + feedback + '\'' +
+        return "HotelRequestDto{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", about='" + about + '\'' +
                 '}';
     }
 }

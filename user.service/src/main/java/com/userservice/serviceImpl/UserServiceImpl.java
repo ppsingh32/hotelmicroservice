@@ -1,13 +1,17 @@
 package com.userservice.serviceImpl;
 
+import com.userservice.core.RatingService;
+import com.userservice.dto.RatingResponseDto;
 import com.userservice.dto.UserRequestDto;
 import com.userservice.dto.UserResponseDto;
 import com.userservice.exception.DataNotFoundException;
+import com.userservice.mapper.RatingMapper;
 import com.userservice.mapper.UserMapper;
+import com.userservice.model.Rating;
 import com.userservice.model.User;
 import com.userservice.repository.UserRespository;
 import com.userservice.service.UserService;
- import org.slf4j.Logger;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +29,12 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    RatingService ratingService;
+
+    @Autowired
+    RatingMapper ratingMapper;
 
     @Autowired
     private UserRespository userRespository;
@@ -66,7 +76,20 @@ public class UserServiceImpl implements UserService {
         Optional<User> userDta = userRespository.findById(id);
         if(userDta.isPresent())
         {
-           return ResponseEntity.ok(userMapper.userToUserResponseDto(userDta.get()));
+            Long userId = userDta.get().getId();
+            ResponseEntity<List<RatingResponseDto>> ratingByUserId = ratingService.getRatingByUserId(userId);
+            List<RatingResponseDto> ratings = ratingByUserId.getBody();
+            List<Rating> newRatings = ratings.stream().map(ratingResponseDto ->
+            {
+
+                Rating rating = ratingMapper.ratingResponseDtoToRating(ratingResponseDto);
+                logger.info("rating:{}",rating);
+                return rating;
+            }).collect(Collectors.toList());
+           if(!newRatings.isEmpty())
+            userDta.get().setRatings(newRatings);
+             logger.info("newRatings ********************* :{}", newRatings);
+            return ResponseEntity.ok(userMapper.userToUserResponseDto(userDta.get()));
         }else {
             throw new DataNotFoundException("User Not Found!");
         }

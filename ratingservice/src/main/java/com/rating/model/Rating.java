@@ -10,33 +10,35 @@ public class Rating {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ratingId;
-
+    private Long id;
     private Long userId;
-
-    private Long hotelId;
-
-    private  int rating;
-
+    private String hotelId;
+    private  Long rating;
     private  String feedback;
+
+    @Transient
+    private Hotel hotel;
+
+
 
     public Rating() {
     }
 
-    public Rating(Long ratingId, Long userId, Long hotelId, int rating, String feedback) {
-        this.ratingId = ratingId;
+    public Rating(Long id, Long userId, String hotelId, Long rating, String feedback, Hotel hotel) {
+        this.id = id;
         this.userId = userId;
         this.hotelId = hotelId;
         this.rating = rating;
         this.feedback = feedback;
+        this.hotel= hotel;
     }
 
-    public Long getRatingId() {
-        return ratingId;
+    public Long getId() {
+        return id;
     }
 
-    public void setRatingId(Long ratingId) {
-        this.ratingId = ratingId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getUserId() {
@@ -47,19 +49,19 @@ public class Rating {
         this.userId = userId;
     }
 
-    public Long getHotelId() {
+    public String getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(Long hotelId) {
+    public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
 
-    public int getRating() {
+    public Long getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Long rating) {
         this.rating = rating;
     }
 
@@ -71,14 +73,23 @@ public class Rating {
         this.feedback = feedback;
     }
 
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
     @Override
     public String toString() {
         return "Rating{" +
-                "ratingId=" + ratingId +
+                "id=" + id +
                 ", userId=" + userId +
-                ", hotelId=" + hotelId +
+                ", hotelId='" + hotelId + '\'' +
                 ", rating=" + rating +
                 ", feedback='" + feedback + '\'' +
+                ", hotel=" + hotel +
                 '}';
     }
 }

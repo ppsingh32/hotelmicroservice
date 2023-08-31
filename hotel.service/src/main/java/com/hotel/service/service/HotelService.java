@@ -14,6 +14,6 @@ public interface HotelService {
 
     ResponseEntity<List<HotelResponseDto>> getAll();
 
-    ResponseEntity<HotelResponseDto> getHotelById(Long id);
+    ResponseEntity<HotelResponseDto> getHotelById(String id);
 
 }

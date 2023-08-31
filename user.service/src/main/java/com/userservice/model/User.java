@@ -23,7 +23,7 @@ public class User {
     private String phone;
 
     @Transient
-    private List<Rating> ratings=new ArrayList<>();
+    private List<Rating> ratings =new ArrayList<>();
 
     @CreatedDate
     @Column(name = "created_at")

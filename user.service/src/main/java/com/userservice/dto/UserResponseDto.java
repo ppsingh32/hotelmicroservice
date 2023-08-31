@@ -1,6 +1,11 @@
 package com.userservice.dto;
 
+import com.userservice.model.Rating;
+import jakarta.persistence.Transient;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 public class UserResponseDto {
@@ -8,6 +13,17 @@ public class UserResponseDto {
     private String name;
     private String email;
     private String phone;
+
+    @Transient
+    private List<Rating> ratings =new ArrayList<>();
+
+    public List<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
+    }
 
     public UserResponseDto() {
     }

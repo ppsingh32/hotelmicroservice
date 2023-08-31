@@ -20,7 +20,7 @@ public interface RatingService {
     ResponseEntity<List<RatingResponseDto>> getRatingByUserId(Long userId);
 
     //get all by hotel
-    ResponseEntity<List<RatingResponseDto>> getRatingByHotelId(Long hotelId);
+    ResponseEntity<List<RatingResponseDto>> getRatingByHotelId(String hotelId);
 
 
 }

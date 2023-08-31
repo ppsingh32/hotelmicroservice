@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface HotelRepositorty extends MongoRepository<Hotel, Long> {
+public interface HotelRepositorty extends MongoRepository<Hotel, String> {
 
 }
